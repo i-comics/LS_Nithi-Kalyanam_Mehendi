@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  background: #FAF0D9;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.font-display { font-family: 'Playfair Display', serif; }
+.font-script { font-family: 'Great Vibes', cursive; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #7E22CE; border-radius: 10px; }
+
+.swatch {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba(126,34,206,0.4);
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.swatch:active { transform: scale(0.9); }
+.swatch.selected { box-shadow: 0 0 0 3px #7E22CE; transform: scale(1.08); }
+
+.btn-primary {
+  background: #7E22CE;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all .15s ease;
+}
+.btn-primary:active { transform: scale(0.96); background: #6b21a8; }
+
+.card {
+  background: #fffdf9;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 40px -10px rgba(126,34,206,0.35);
+}
+
+@keyframes flash {
+  0% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+.flash-effect {
+  animation: flash 0.35s ease-out forwards;
+}
